@@ -7,70 +7,74 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <p>The header does not have a position so therefore it is static. When it's position is static that means that it is in it's regular position of the documents flow. Along with the position being static, we have not changed any other properties such as left, right, top, and bottom. So when it comes to the header for the holy grail, it's position is not messed with nor do we mess with any property associated with it so it just goes with the document's flow.</p>
+    </header>
     <nav>
-        <div class="logo">
-        </div>
+        <p>Unlike the header, the navigation bar has fixed position. This means that it is fixed to wherever it's been placed at. For example, if you were making a website and wanted to keep the navigation bar visible at all times no matter where you scroll the page then you would use fixed positioning. Along with the position property we also changed the top and left property. This means that with the values we had put in the nav bar will that amount of pixels away from the top and left of the page. </p>
     </nav>
     <div>
-        <div class="container">
-            <div class="article1">
-                <article></article>
-                <article></article>
-            <div class="article2">
-                <article></article>
-                <article></article>
-            </div>
-            </div>
+        <div class="articles">
+            <article>
+                <p>When analyzing the article element we can see that the position is relative. This means that the element that is being placed is slightly positioned offset from where the normal position would be once it's other position elements are changed as well. If the other position elements are not changed then it's positing won't matter; however, in this example we have changed the top 15 pixels so it will be moved 15 pixels from the top of the container that it is currently in. </p>
+            </article>
+            <article></article>
         </div>
+    <aside>
+        <p>The aside element's position has been listed as absolute. This means that this specfic element has now been removed from the flow of the document and now seemingly exists independently of this document. Along with it having a position of absolute, it also has had the top element changed so that way it is now 235 pixels away from the top of the page.</p>
+    </aside>
     </div>
     <footer>
-        <h1>Copyright 2023</h1>
+        <p>Just like the article's position, the footer also has a fixed position. This means that this specific element is now fixed to the spot it is currently placed in and even if I scroll the page it won't move. Along with having a fixed position, the bottom element has also been changed to 0 pixels meaning that now the footer is on the bottom on the page.</p>
     </footer>
     <style>
+        header {
+            width: 90%;
+            height: 100px;
+            background-color: #15d63f;
+            border: 3px solid white;
+            padding: 10px;
+            margin: 25px;
+        }
         nav {
-            width: 100%;
-            height: 80px;
-            background-color: white;
             position: fixed;
-            border-bottom: 2px solid black;
-            box-shadow: 0px 0px 8px black;
+            width: 90%;
+            height: 50px;
+            background-color: #10a330;
+            position: fixed;
+            top: 170px;
+            left: 35px;
         }
         article {
-            width: 200px;
+            width: 65%;
             height: 200px;
-            background-color: white;
+            background-color: #09571a;
+            border: 5px solid black;
             position: relative;
-            margin: 20px;
+            top:15px;
+        }
+        aside {
+            width: 40%;
+            height: 420px;
+            background-color: #7edd93;
+            position: absolute;
+            left: 50%;
+            right: 10%;
+            top: 235px;
         }
         footer {
             width: 100%;
-            height: 80px;
-            background-color: white;
+            height: 50px;
+            background-color: #1d572a;
             position: fixed;
-            border-top: 2px solid black;
-            border-color: black;
-            text-align: center;
+            bottom: 0px;
         }
-        .container {
-            height: 800px;
-            background-color: grey;
-        }
-        .article1 {
+        .articles {
             position: relative;
-            top: 225px;
-            left: 100px;
-        }
-        .article2 {
-            position: relative;
-            left: 800px;
-            bottom: 440px;
-        }
-        .logo {
-            width: 80px;
-            height: 80px;
-            background-color: black;
-            position: absolute;
-            right: 0px;
+            left: 30px;
+            top: 45px;
+            width: 65%;
+            height: 70%;
         }
     </style>
 </body>
